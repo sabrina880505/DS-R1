@@ -1,0 +1,51 @@
+2020/11/20(五), 109學年第一學期 資料科學應用 R小考(1)
+
+學號:A106260082姓名:姜品君 
+
+# (請依照規定)貼上執行程式碼及執行結果。
+詳見: R程式作業繳交方式
+http://www.hmwu.idv.tw/web/teaching/doc/R-how-homework.pdf
+
+> # ex1(a)
+
+> # ex1(a)
+> score.a <- read.csv("Calculus-score-A.csv",header = 3)
+> colnames(score.a) <- c("座號", "學號", "姓名", "性別", "quiz(1)",	"quiz(2)",	"quiz(3)",	"quiz(4)",	"TA",	"MidtermExam",	"FinalExam",	"Attendance")
+> score.a.1 <- data.frame(score.a$座號(3:42),score.a$學號(3:42),score.a$姓名(3:42),score.a$性別(3:42),score.a$`quiz(1)`(3:42),score.a$`quiz(2)`(3:42),score.a$`quiz(3)`(3:42),score.a$`quiz(4)`(3:42),score.a$TA(3:42),score.a$MidtermExam(3:42),score.a$FinalExam(3:42),score.a$Attendance(3:42))
+Error in data.frame(score.a$座號(3:42), score.a$學號(3:42), score.a$姓名(3:42),  : 
+  不適用於非函數
+> score.b <- read.xlsx('Calculus-score-B.xls', sheetIndex = 1, startRow = 3, encoding = "UTF-8")
+> colnames(score.b) <- c("座號", "學號", "姓名", "性別", "quiz(1)",	"quiz(2)",	"quiz(3)",	"quiz(4)",	"TA",	"MidtermExam",	"FinalExam",	"Attendance")
+> front.a <- head(score.a,5)
+> end.a <- tail(score.a,5)
+> front.a
+  座號      學號   姓名 性別 quiz(1) quiz(2) quiz(3) quiz(4)   TA MidtermExam FinalExam Attendance
+1                            quiz(1) quiz(2) quiz(3) quiz(4)   TA MidtermExam FinalExam Attendance
+2 座號      學號   姓名 性別      7%      7%      8%      8%  15%         25%       30%      Times
+3    1 401405008 希瑄彥   男      10       0       5      20    0          55        50          2
+4    2 401550880 張泓丞   男      25      40      70      87   80          46        68          9
+5    3 404550061 張安婕   女      18      15      48      33 86.7          54        79          9
+> end.a
+   座號      學號   姓名 性別 quiz(1) quiz(2) quiz(3) quiz(4)   TA MidtermExam FinalExam Attendance
+38   36 404550369 陳王霖   女      55      73      92      73  100          72        81          9
+39   37 404550420 何瑄穎   男      28      10      35       3 66.7          30         0          7
+40   38 404550431 沈泓霏   女      15      25      53      67 93.3          29        42          9
+41   39 404550442 許安霏   女      53      60      80      72  100          61        62          9
+42   40 404550453 李政宜   男      80     100      85     100  100          95       100          3
+> front.b <- head(score.b,5)
+> end.b <- tail(score.b,5)
+> front.b
+  座號      學號   姓名 性別 quiz(1) quiz(2) quiz(3) quiz(4)    TA MidtermExam FinalExam Attendance
+1    1 404550465 史文羽   男      60      81     100      97 100.0          90        83          6
+2    2 404685071 鄭樺妤   男      80     100     100      92 100.0          92        97          2
+3    3 404685084 張敬安   男      10      40      62      93 100.0          65        84          9
+4    4 404685099 何筑亦   女      15      25      40      13  93.3          36         5          9
+5    5 404685100 張  儀   女      30      45      70      61  93.3          29        48          4
+> end.b
+   座號      學號   姓名 性別 quiz(1) quiz(2) quiz(3) quiz(4)  TA MidtermExam FinalExam Attendance
+51   51 404685407 鄭鈺尤   女      80      85     100      85 100          89        95          9
+52   52 404685905 楊宜路   男      48      35      48      98 100          50        62          9
+53   53 404685013 張渝妤   男       0      38      60      40  87          49        25          1
+54   54 404685119 廖暄安   男      50      70      20      85 100          54        69          4
+55   55 499555916 楊毅亦   女       5      35      45      55  87          58        60          3
+> 
